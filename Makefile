@@ -1,4 +1,6 @@
-build:
+.PHONY: build clean
+
+build: clean
 	mkdir -p build
 	cat src/* > build/bible
 	strfile -c '%' build/bible build/bible.dat
